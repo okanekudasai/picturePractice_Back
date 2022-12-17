@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="picturePractice.PictureMapper">
+
+	<insert id="uploadOneFile" parameterType="picturePractice.PictureDto">
+		insert into img value(#{savedName}, #{ext}, #{originalName}, #{savedPath}, #{volume})
+	</insert>
+
+	<select id="downloadAllPicture" resultType="picturePractice.PictureDto">
+		select savedName, ext, originalName, savedPath, volume from img
+	</select>
+
+	<select id="getTotalVolume" resultType="int">
+		select sum(volume) from img;
+	</select>
+</mapper>
