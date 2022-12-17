@@ -13,4 +13,8 @@ public interface PictureMapper {
 
 	int getTotalVolume();
 
+	String getadm();
+
+	void clearAllProcess();
+
 }

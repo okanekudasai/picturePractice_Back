@@ -16,4 +16,13 @@
 	<select id="getTotalVolume" resultType="int">
 		select sum(volume) from img;
 	</select>
+	
+	<select id="getadm" resultType="string">
+		select adm from secret
+	</select>
+	
+	<delete id="clearAllProcess">
+		delete from img
+	</delete>
+	
 </mapper>
